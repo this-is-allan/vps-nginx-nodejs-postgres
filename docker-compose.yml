@@ -21,5 +21,7 @@ services:
   minha_app:
     image: allancarlos/minha-app-dockerizada:latest
     build: .
+    environment:
+      - ACTUAL_ENV=${ENV}
     depends_on:
       - db
